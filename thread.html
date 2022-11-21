@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech4Students</title>
+    <link rel="stylesheet" href="thread.css">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+<body>
+  <div class="all">
+        <div class="webTitle">
+          <h1 onclick="location.href='discussions.html';">Tech4Students</h1>
+        </div>
+        <div class="header"></div>
+        <div class="content">
+          <textarea placeholder="type your message here"></textarea>
+            <button>POST</button>
+          <div class="comments">
+            <div class="comment"></div>
+          </div>
+        </div>
+
+  </div>
+    <script src="data.js"></script>
+    <script>
+        // localStorage.clear();
+        var id = window.location.search.slice(1);
+        var thread = threads.find(t => t.id == id);
+        var header = document.querySelector('.header');
+        var headerHtml = `
+            <h4 class="title">
+                ${thread.title}
+            </h4>
+            <div class="bottom">
+                <p class="timestamp">
+                    ${new Date(thread.date).toLocaleString()}
+                </p>
+                <p class="comment-count">
+                    ${thread.comments.length} comments
+                </p>
+            </div>
+        `
+        header.insertAdjacentHTML('beforeend', headerHtml)
+
+        function addComment(comment) {
+            var commentHtml = `
+                <div class="comment">
+                    <div class="top-comment">
+                        <p class="user">
+                            ${comment.author}
+                        </p>
+                        <p class="comment-ts">
+                            ${new Date(comment.date).toLocaleString()}
+                        </p>
+                    </div>
+                    <div class="comment-content">
+                      ${comment.content}
+                    </div>
+                </div>
+            `
+            comments.insertAdjacentHTML('beforeend', commentHtml);
+        }
+
+        var comments = document.querySelector('.comments');
+        for (let comment of thread.comments) {
+            addComment(comment);
+        }
+
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function() {
+            var txt = document.querySelector('textarea');
+            var comment = {
+                content: txt.value,
+                date: Date.now(),
+                author: 'Anonymous'
+            }
+            addComment(comment);
+            txt.value = '';
+            thread.comments.push(comment);
+            localStorage.setItem('threads', JSON.stringify(threads));
+        })
+        function GetWrapedText(text, maxlength) {    
+          var resultText = [""];
+          var len = text.length;    
+          if (maxlength >= len) {
+              return text;
+          }
+          else {
+              var totalStrCount = parseInt(len / maxlength);
+              if (len % maxlength != 0) {
+                  totalStrCount++
+              }
+      
+              for (var i = 0; i < totalStrCount; i++) {
+                  if (i == totalStrCount - 1) {
+                      resultText.push(text);
+                  }
+                  else {
+                      var strPiece = text.substring(0, maxlength - 1);
+                      resultText.push(strPiece);
+                      resultText.push("<br>");
+                      text = text.substring(maxlength - 1, text.length);
+                  }
+              }
+          }
+          return resultText.join("");
+      }
+    </script>
+</body>
+</html>
+
+
+<!--
+Cindy:
+-thread 
+-text wrap
+Samantha:
+-thread
+-comments
+-->
+
+

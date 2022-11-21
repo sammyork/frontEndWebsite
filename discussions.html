@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech4Students</title>
+  <link rel="stylesheet" href="discussions.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+<body>
+  <div class="all">
+    <div class="webTitle">
+          <h1 onclick="location.href='index.html';">Tech4Students</h1>
+    </div>
+    <div class="section">
+      <h3>Student Discussions</h3>
+    </div>
+    <div class="content">
+      <ol>
+      </ol>
+    </div>
+  </div>
+  <footer>
+    <div class="credits">
+      <h3>Image Sources From: </h3>
+        <p><a href="https://onetrackmine.com/black-in-brooklyn-tech-alumni-edition-will-we-even-matter-in-20-years/">One Track Mine</a></p>
+        <p><a href="https://insideschools.org/school/13K430">Inside Schools</a></p>
+    </div>
+    <div class="copyright">
+      <h3>Thank you!</h3>
+      <p>&#169 Tech4Students from Cindy and Samantha</p>
+    </div>
+  </footer>
+</body>
+  <script src="data.js"></script>
+    <script>
+        console.log(threads);
+        var container = document.querySelector('ol');
+        for (let thread of threads) {
+            var html = `
+            <li class="row">
+                <a href="/thread.html?${thread.id}">
+                    <h4 class="title">
+                        ${thread.title}
+                    </h4>
+                    <div class="bottom">
+                        <p class="timestamp">
+                            ${new Date(thread.date).toLocaleString()}
+                        </p>
+                        <p class="comment-count">
+                            ${thread.comments.length} comments
+                        </p>
+                    </div>
+                </a>
+            </li>
+            `
+            container.insertAdjacentHTML('beforeend', html);
+        }
+    </script>
+</html>
+
+<!--
+JS - both worked on it
+Cindy - header, sidebar, and footer
+-->

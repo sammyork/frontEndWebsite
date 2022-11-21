@@ -1,0 +1,70 @@
+body{
+  margin:0px;
+}
+.all{
+  font-family: 'Handlee', cursive;
+  color:black;
+}
+
+.webTitle {
+  background-image: url("Images/bridgeBackground.png");
+  opacity: 95%;
+  grid-column: span 6;
+  font-size:x-large;
+  text-align: center;
+  background-size: cover;
+  height: 200px;
+}
+
+h1{
+  padding-top:75px;
+}
+
+.header{
+  grid-area: 2 / 1 / auto / span 1;
+  padding: 2vw;
+}
+
+.content{
+  grid-column: span 5;
+  padding: 2vw 2vw 0 2vw;
+}
+
+body{
+  background-color: #bdcbd5;
+}
+
+.comments{
+  line-height:0px;
+}
+
+.comment {
+  padding: 3vh 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+
+@media screen and (max-width: 900px){
+  .header{
+    grid-area: 2 / 1 / auto / span 6;
+    border-bottom: 2px solid #5e7987;
+  }
+
+  .content{
+    grid-column: span 6;
+  }
+  .webTitle{
+    display:flex;
+    align-items:flex-end;
+    justify-content: center;
+  }
+}
+/*
+Cindy:
+- css styling
+Samantha:
+- html and javascript 
+
+*/

@@ -1,0 +1,107 @@
+.all {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr auto;
+  font-family: 'Handlee', cursive;
+  color:black;
+}
+
+body{
+  background-color: #baccd9;
+}
+
+.webTitle {
+  background-image: url("Images/bridgeBackground.png");
+  opacity: 95%;
+  grid-column: span 6;
+  font-size:x-large;
+  text-align: center;
+  background-size: cover;
+  height: 200px;
+}
+
+h1{
+  padding-top:75px;
+}
+
+.section{
+  background-color:#c7d2d4;
+  grid-area: 2/ 1/ auto/span 2;
+  text-align: center;
+  padding: 10% 3% 0 3%;
+  color: gray;
+}
+.content{
+  background-color: #baccd9;
+  grid-area: 2/auto/auto/span 4;
+  padding: 3% 3% 0 3%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+h3{
+  font-size: 10vw;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.timestamp {
+  padding-right: 10px;
+}
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  line-height: 2px;
+  padding-top: 1%;
+  padding-left:1%;
+  padding-right:1%;
+  font-family: 'Handlee', cursive;
+  background-color: #c3d7df;
+  border-top: 2px solid #1c2938;
+}
+
+footer > .copyright{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items:center;
+}
+
+@media screen and (max-width: 1024px){
+  footer > div{
+    font-size: small;
+  }
+
+  footer{
+    display:block;
+  }
+
+  footer >.copyright{
+    display:block;
+    padding-bottom:2%;
+  }
+
+}
+
+@media screen and (max-width: 900px){
+  h1{
+    padding:40px;
+  }
+  .webTitle{
+    padding-top: 11vh;
+  }
+  h3{
+    font-size: 2vw;
+  }
+}
+
+/*
+Cindy - footer and sidebar
+Samantha - discussion threads
+
+*/

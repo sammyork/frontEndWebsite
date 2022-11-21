@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech4Students</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)}; 
+  formbutton("create", {
+    action: "https://formspree.io/f/xyyvowan",
+    title: "Want to Leave Us a Message?",
+    fields: [
+      { 
+        type: "text", 
+        label: "Subject:", 
+        name: "subject",
+        placeholder: "Subject"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        required: true,
+        placeholder: "Type message here",
+      },
+      { type: "Submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "#11659a"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+</head>
+<body >
+  <div class="all">
+    <div class="webTitle">
+      <h1>Tech4Students</h1>
+    </div>
+    <nav>
+      <a href="#About">About</a>
+      <a href="#Events">Events</a>
+      <a href="#Announcements">Announcements</a>
+      <a href="discussions.html">Students</a>
+      <a href="contact.html">Contacts</a>
+    </nav>
+    <div class="sidebar">
+      <div id=About>
+        <h3>Our Mission</h3>
+          <p id="mission">"Networking is not about just connecting people. It's about connecting people with people, people with ideas, and people with opportunities."</p>
+          <p>-- Michele Jennae</p>
+      </div>
+      <div id="Events">
+        <h3>Events</h3> 
+       <table>
+          <tr class="events">
+              <td class="eventTitle">Parent Teacher Conferences</td>
+              <td class="timestamp">11/17/2022</td>
+            <td class="location"></td>
+          </tr>
+          <tr class="events">
+            <td class="eventTitle">SHSAT Exam</td>
+            <td class="timestamp">11/19/2022</td>
+            <td class="location">BTHS</td>
+          </tr>
+          <tr class="events">
+            <td class="eventTitle">Culture Fair</td>
+            <td class="timestamp">11/22/2022 4PM-6PM</td>
+            <td class="location">Cafe</td>
+          </tr><tr class="events">
+            <td class="eventTitle">Thanksgiving Break</td>
+            <td class="timestamp">11/24/2022 - 11/25/2022</td>
+            <td class="location">No School</td>
+          </tr><tr class="events">
+            <td class="eventTitle">Winter Concert</td>
+            <td class="timestamp">12/05/2022</td>
+            <td class="location">Audi</td>
+          </tr>
+        </table>
+      </div>
+      <br>
+    </div>
+    <div class="content">
+      <div id="Announcements">
+        <h3>Announcements</h3> 
+        <dl>
+          <dt>New Parent Outreach Policy</dt>
+          <dd>Teachers are to contact a student's parent when any of the following occur:</dd>
+          <ol>
+            <li>Student has a pattern of missing hw (3 missing assignments)</li>
+            <li>Student has a pattern of missing class (3 unexcused absences</li>
+            <li>Student has failed a major assessment</li>
+            <li>Student is at risk of failing a class halfway into the marking period (class average of 70 or less)</li>
+          </ol>
+          <dt>Clubs</dt>
+          <dd>All club activity is cancelled on Wednesday, November 23rd</dd>
+          <dt>College Fee Waivers(For Seniors)</dt>
+          <dd>All waivers must be requested by Monday, December 12th (hard deadline)</dd>
+          <dt>Brooklyn Tech Blood Drive</dt>
+          <dd>Register to donate blood at tech's blood drive on December 19th!</dd>
+          <dt>2022 Winter Concert Series & Art Exhibition</dt>
+          <dd>$7 in GO store for Tri-M members, faculty, and students with GO stickers and $10 at the door</dd>
+          <dd>Doors open at 5:30pm</dd>
+          <ul class="no bullets">
+            <li>December 5th - Choral Concert</li>
+            <li>December 7th - Orchestral Concert</li>
+            <li>December 9th - Instrumental Concert</li>
+          </ul>
+          <dt>More Coming Soon...</dt>
+        </dl>
+      </div>
+<!--       <div class="SubmitForm">
+        <form action="https://formspree.io/f/xyyvowan" method="POST">
+          <fieldset>
+            <h3>What would you like to say?</h2>
+            <label> 
+              Subject Header: 
+              <input type="text" name="subject">
+            </label>
+            <label for="type">Type:</label>
+            <select id="type" name="type" size="5">
+              <option value="question">Question</option>
+              <option value="offTopic">Off Topic</option>
+            </select>
+            <label>
+              Message:
+              <textarea name="message"></textarea>
+            </label> -->
+<!--              <label for="subject">Subject</label>
+            <input type="text" id="subject">
+            <label for="messageType">Type</label>
+            <select id="messageType">
+              <option value="event">Event</option>
+              <option value="announcement">Announcement</option>
+              <option value="question">Student Question</option>
+              <option value="outOfTopic">Out Of Topic</option>
+            </select>
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+            -->
+<!--             <button type="submit">Post</button>
+          </fieldset>
+        </form> -->
+          
+        <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form-->
+<!--       </div> -->
+
+    </div>
+  </div>
+  <footer>
+    <div class="credits">
+      <h3>Image Sources From: </h3>
+        <p><a href="https://onetrackmine.com/black-in-brooklyn-tech-alumni-edition-will-we-even-matter-in-20-years/">One Track Mine</a></p>
+        <p><a href="https://insideschools.org/school/13K430">Inside Schools</a></p>
+    </div>
+    <div class="copyright">
+      <h3>Thank you!</h3>
+      <p>&#169 Tech4Students from Cindy and Samantha</p>
+    </div>
+  </footer>
+</body>
+</html>
+<!--html 5 form validation-->
+
+<!--
+Cindy:
+-navigtion bar 
+-events table
+-footer
+
+Samantha:
+-announcements 
+-->

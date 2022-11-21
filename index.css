@@ -1,0 +1,194 @@
+.all {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr auto;
+  font-family: 'Handlee', cursive;
+  color:black;
+}
+
+.webTitle {
+  background-image: url("Images/bridgeBackground.png");
+  opacity: 95%;
+  grid-area: 1 / 1 / span 1 / span 6;
+  font-size:x-large;
+  text-align: center;
+  background-size: cover;
+  height: 200px;
+}
+table {
+  padding-bottom:45px;
+}
+h1{
+  padding-top:75px;
+}
+
+h3{
+  font-size: 3vh;
+}
+nav {
+  background-color: #a9b6aa;
+  grid-area: 2 / 1 / span 1 / span 6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:.5%;
+  font-size: large;
+} 
+
+.sidebar{
+  background-color: #c7d2d4;
+  grid-area: 3 / 1 / auto / span 2;
+  padding:3%;
+
+}
+.content{
+  background-color: #baccd9;
+  grid-area: 3/auto/auto/span 4;
+  padding: 3%;
+}
+
+form{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #d8e3e7;
+  padding: 3%;
+}
+
+body {
+  margin: 10px 60px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+h1, h4, ol {
+  margin: 3%;
+  color: black;
+}
+
+p {
+  margin: 5px 0;
+}
+.top-bar {
+  background-color: skyblue;
+  padding: 0 40px;
+}
+.main{
+  background-color: #F6F6EF;
+  padding: 10px 15px;
+}
+.row {
+  padding: 5px 0;
+}
+.bottom {
+  display: flex;
+  color: #5e7987;
+  font-size: 1.25vh;
+}
+.timestamp {
+  padding-right: 10px;
+}
+
+#Events{
+  padding:2%;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items:center;
+  border: 2px solid #1a6840;
+}
+
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  line-height: 2px;
+  padding-top: 1%;
+  padding-left:1%;
+  padding-right:1%;
+  font-family: 'Handlee', cursive;
+  background-color: #c3d7df;
+  border-top: 2px solid #1c2938;
+}
+
+footer > .copyright{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items:center;
+}
+
+#mission + p{
+  text-align: right;
+}
+
+dl > ol, dl > ul {
+  padding-left:3vh;
+  line-height: 2vh;
+}
+dl > dt {
+  font-size:3vh;
+}
+
+@media screen and (max-width: 1024px){
+  footer > div{
+    font-size: small;
+  }
+  nav{
+    display:flex;
+    flex-direction:column;
+    font-size: 2vh;
+  }
+
+  .webTitle{
+    display:flex;
+    align-items:flex-end;
+    justify-content: center;
+  }
+
+  .sidebar{
+    grid-area: 3 / 1 / auto / span 6;
+  }
+  
+  .content{
+    grid-area: auto / 1 / auto / span 6;
+  }
+  
+  footer{
+    display:block;
+  }
+
+  footer >.copyright{
+    display:block;
+    padding-bottom:2%;
+  }
+  
+  #mission + p{
+    padding-left: 60vw;
+  }
+
+  .bottom{
+    font-size:2vh;
+  }
+}
+
+@media screen and (max-width: 500px){
+  nav{
+    display:flex;
+    flex-direction:column;
+    font-size: 2vh;
+  }
+}
+
+
+/* did css for respective parts 
+Cindy:
+-navigtion bar 
+-events table
+-footer
+
+Samantha:
+-announcements 
+
+*/
